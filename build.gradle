@@ -31,8 +31,6 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 
-	//compile group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
-
 	//MapStruct
 	implementation "org.mapstruct:mapstruct:$mapstructVersion"
 	annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
@@ -48,6 +46,8 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+
+	testImplementation 'com.tngtech.archunit:archunit:0.14.1'
 }
 
 test {
